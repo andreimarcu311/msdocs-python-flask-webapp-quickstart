@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - voyager-test-mas3clj
 on:
   push:
     branches:
-      - main
+      - staging
   workflow_dispatch:
 
 jobs:
@@ -58,4 +58,5 @@ jobs:
         with:
           app-name: 'voyager-test-mas3clj'
           slot-name: 'staging'
+
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_09AA80B709754E5ABF84B24061B2848E }}
